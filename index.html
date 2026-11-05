@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>木构架交互图谱 · 中国建筑史复习（浙大 355）</title>
+<meta name="description" content="抬梁式与穿斗式、《营造法式》殿堂型与厅堂型、唐宋元明清木构架演变的交互式复习图谱。离线可用。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <div class="brand">木构架图谱<small>中建史 · 浙大355</small></div>
+  <nav class="tabs" id="tabs">
+    <a href="#map"><span class="k">1</span>知识地图</a>
+    <a href="#timeline"><span class="k">2</span>演变时间线</a>
+    <a href="#compare"><span class="k">3</span>抬梁×穿斗</a>
+    <a href="#fashi"><span class="k">4</span>殿堂×厅堂</a>
+    <a href="#cases"><span class="k">5</span>案例实验室</a>
+    <a href="#draw"><span class="k">6</span>画图训练</a>
+    <a href="#quiz"><span class="k">7</span>3分钟自测</a>
+    <a href="#sources"><span class="k">i</span>资料与边界</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- 1 知识地图 -->
+<section class="page" id="p-map">
+  <h2>先分清"分类维度"，再谈区别</h2>
+  <p class="lead">抬梁/穿斗回答"荷载怎么传"；殿堂/厅堂回答"《营造法式》的官式构架怎么组织"。它们不是四个并列的东西。点击节点看结构图和要点。</p>
+  <div class="card mapwrap" id="mapSvg"></div>
+  <div class="grid2" id="mapInfo"></div>
+  <div class="card">
+    <h3>30 分钟学习路线（按验收标准排序）</h3>
+    <table class="t"><tr><th>时间</th><th>做什么</th><th>验收</th></tr>
+      <tr><td>0–5′</td><td>本页四个节点各点一次；在模块3播放两种"荷载传递"</td><td>能用一句话说出：抬梁"檩→梁→柱"，穿斗"檩→柱"</td></tr>
+      <tr><td>5–12′</td><td>模块4 打开"结构分层"看殿堂三层；切到厅堂看内柱升高；拆解题名"八架椽屋前后乳栿用四柱"</td><td>看剖面能判断殿堂/厅堂并说出两条依据</td></tr>
+      <tr><td>12–20′</td><td>模块2 逐个点六个时期，用"对照"比较唐与清</td><td>能 3 分钟串讲唐→宋→辽金元→明→清</td></tr>
+      <tr><td>20–27′</td><td>模块6 按步骤画"八架椽屋前后乳栿用四柱"和"抬梁/穿斗"</td><td>能独立画出 2026、2025 真题图</td></tr>
+      <tr><td>27–30′</td><td>模块7 做一轮自测并如实打分</td><td>记录"正确/部分正确/错误"，不靠"看过"</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 2 时间线 -->
+<section class="page" id="p-timeline">
+  <h2>木构架演变时间线</h2>
+  <p class="lead">每个阶段：一句话结论＋三个关键词＋一个案例；下面是六个问题的答案与"例外"。点"对照"选第二个时期，图表会并列比较。演变不是单一的"退化"——请看每段的例外。</p>
+  <div class="tl-rail" id="tlRail"></div>
+  <div class="seg" id="tlMode"></div>
+  <div id="tlBody"></div>
+</section>
+
+<!-- 3 抬梁 × 穿斗 -->
+<section class="page" id="p-compare">
+  <h2>抬梁式 × 穿斗式：荷载到底怎么落地</h2>
+  <p class="lead">两个模型可以分别操作：点构件看名称；"荷载传递"逐步播放；"拆解"分层拉开；"逐个出现"就是画图顺序；"隐藏标注模式"用来自测。下方"同步操作"让两边一起切换。</p>
+  <div class="seg" id="syncBar"></div>
+  <div class="grid2">
+    <div id="vTL"></div>
+    <div id="vCD"></div>
+  </div>
+  <div class="card"><h3>对照表（2025 浙大画图题要求比较"结构、营造、功能"）</h3><div class="tw" id="cmpTable"></div></div>
+  <div class="card"><h3>考试画图：最少步骤</h3><div class="grid2" id="cmpSteps"></div></div>
+</section>
+
+<!-- 4 殿堂 × 厅堂 -->
+<section class="page" id="p-fashi">
+  <h2>《营造法式》殿堂型 × 厅堂型</h2>
+  <p class="lead">殿堂：水平分层（柱网层—铺作层—屋架层）；厅堂：竖向分缝（每缝梁架用几柱、几种栿灵活组合，内柱随举势升高）。本页重点：2026 浙大第57题"八架椽屋前后乳栿用四柱"。</p>
+  <div class="card" id="exam2026"></div>
+  <div class="grid2">
+    <div id="vDT"></div>
+    <div id="vTT"></div>
+  </div>
+  <div class="card"><h3>看剖面判断构架类型（四步检查）</h3><div id="judge"></div></div>
+  <div class="card decoder"><h3>厅堂命名解码器："×架椽屋＋梁栿组合＋用×柱"</h3><div id="decoder"></div></div>
+  <div class="card"><h3>与抬梁、穿斗的分类关系</h3><div id="relTable"></div></div>
+  <div class="card"><h3>参考复原图（非本站绘制）</h3><div class="figs" id="refFigs"></div></div>
+</section>
+
+<!-- 5 案例 -->
+<section class="page" id="p-cases">
+  <h2>历史建筑案例实验室</h2>
+  <p class="lead">照片上的红点 = 剖面里的哪根构件？点红点，右侧结构图会高亮对应构件（有可靠依据时）。每个案例都标明证据等级。</p>
+  <div class="seg" id="caseTabs"></div>
+  <div id="caseBody"></div>
+</section>
+
+<!-- 6 画图训练 -->
+<section class="page" id="p-draw">
+  <h2>考试画图训练器</h2>
+  <p class="lead">先看题目→自己在纸上（或下方画板）画→需要时看提示→逐步显示参考→最后对照完整标注图。参考图默认隐藏。</p>
+  <div class="seg" id="drawTabs"></div>
+  <div id="drawBody" class="trainer"></div>
+</section>
+
+<!-- 7 自测 -->
+<section class="page" id="p-quiz">
+  <h2>3 分钟闭卷自测</h2>
+  <p class="lead">结果只记录你作答后的自评或自动判分，分为"正确 / 部分正确 / 错误 / 尚未测试"；浏览过不算掌握。数据保存在本机浏览器（localStorage）。</p>
+  <div class="card"><div class="qstat" id="qstat"></div></div>
+  <div class="seg" id="quizTabs"></div>
+  <div id="quizBody"></div>
+  <div class="card"><h3>作答记录</h3><div id="qlog" class="qlog tw"></div></div>
+</section>
+
+<!-- i 资料 -->
+<section class="page" id="p-sources">
+  <h2>资料依据与边界</h2>
+  <div id="srcBody"></div>
+</section>
+</main>
+<footer>本地离线页面 · 结构图为教学示意，均注明依据；照片来自 Wikimedia Commons（各自署名与许可见案例页）；教材图仅供个人复习。</footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script src="js/engine.js"></script>
+<script src="js/models.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
