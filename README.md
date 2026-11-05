@@ -1,5 +1,7 @@
 # 木构架交互图谱 · 中国建筑史（浙大 355）复习系统
 
+**在线访问：[https://galileo21stt.github.io/mugoujia-site/](https://galileo21stt.github.io/mugoujia-site/)**（电脑、手机均可直接点击打开，无需下载）
+
 一个离线就能用的静态网页，帮你把中国古代木构架"看懂、记住、会画、会讲"。电脑和手机都能用。
 
 ## 怎么打开
